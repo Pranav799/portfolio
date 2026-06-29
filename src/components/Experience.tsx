@@ -36,7 +36,7 @@ export default function Experience() {
     {
       id: 'mca',
       role: 'Master of Computer Applications (MCA)',
-      company: 'Post Graduate Studies',
+      company: 'Kristu jayanti University',
       location: 'India',
       period: '2022 — 2024',
       type: 'education',

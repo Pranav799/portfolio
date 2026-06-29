@@ -17,7 +17,7 @@ export default function Skills() {
     { name: 'TypeScript', category: 'frontend', level: 'Intermediate' },
     { name: 'HTML5 & CSS3', category: 'frontend', level: 'Advanced' },
     { name: 'Vanilla CSS', category: 'frontend', level: 'Advanced' },
-    { name: 'Responsive Web Design', category: 'frontend', level: 'Advanced' },
+    { name: 'Web Design', category: 'frontend', level: 'Advanced' },
     
     // Backend
     { name: 'Java', category: 'backend', level: 'Advanced' },
@@ -26,7 +26,7 @@ export default function Skills() {
     
     // Tools & Databases
     { name: 'Git & GitHub', category: 'tools', level: 'Advanced' },
-    { name: 'REST Client / Postman', category: 'tools', level: 'Advanced' },
+    { name: 'Postman', category: 'tools', level: 'Advanced' },
     { name: 'Figma', category: 'tools', level: 'Advanced' }
   ];
 

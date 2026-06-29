@@ -224,11 +224,6 @@ export default function Contact() {
             </form>
           </div>
         </div>
-        
-        {/* Footer info line */}
-        <div className="footer-credits">
-          <p>© 2026 Pranav. All Rights Reserved. Built with React & Vanilla CSS.</p>
-        </div>
       </div>
     </section>
   );

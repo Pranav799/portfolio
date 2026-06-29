@@ -4,16 +4,8 @@ import './Hero.css';
 export default function Hero() {
   return (
     <section id="home" className="hero-section">
-      {/* Left Sidebar decorative vertical text */}
-      <div className="sidebar-text sidebar-left-top">
-        <span>SOFTWARE DEVELOPMENT ENGINEER</span>
-      </div>
-      <div className="sidebar-text sidebar-left-bottom">
-        <span>2026</span>
-      </div>
-
       <div className="container hero-container">
-        {/* Left Column: Metrics, Title, Subtitle, Scroll Prompt */}
+        {/* Hero Content: Metrics, Name, Designation, Scroll Prompt */}
         <div className="hero-content animate-fade-in">
           {/* Metrics */}
           <div className="metrics-row">
@@ -31,7 +23,7 @@ export default function Hero() {
           <div className="hero-title-area">
             <h1 className="hero-huge-title">Pranav</h1>
             <p className="hero-subtitle">
-              SDE - I at KJSDC
+              Software Development Engineer
             </p>
           </div>
 
@@ -42,17 +34,6 @@ export default function Hero() {
               <ArrowDown size={14} className="scroll-arrow" />
             </a>
           </div>
-        </div>
-
-        {/* Right Column: Hero Portrait Image */}
-        <div className="hero-image-wrapper">
-          <div className="image-border-effect"></div>
-          <img
-            src="/hero_portrait.png"
-            alt="Pranav - Software Development Engineer"
-            className="hero-image"
-            loading="eager"
-          />
         </div>
       </div>
     </section>
