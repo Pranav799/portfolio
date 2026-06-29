@@ -29,9 +29,9 @@ export default function Hero() {
 
           {/* Title Area */}
           <div className="hero-title-area">
-            <h1 className="hero-huge-title">Hello</h1>
+            <h1 className="hero-huge-title">Pranav</h1>
             <p className="hero-subtitle">
-              — It's <span className="serif-font">Pranav</span>, an SDE at KJSDC
+              SDE - I at KJSDC
             </p>
           </div>
 

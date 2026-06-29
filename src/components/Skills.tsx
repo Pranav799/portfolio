@@ -14,7 +14,6 @@ export default function Skills() {
     // Frontend
     { name: 'React', category: 'frontend', level: 'Advanced' },
     { name: 'Angular', category: 'frontend', level: 'Intermediate' },
-    { name: 'JavaScript (ES6+)', category: 'frontend', level: 'Advanced' },
     { name: 'TypeScript', category: 'frontend', level: 'Intermediate' },
     { name: 'HTML5 & CSS3', category: 'frontend', level: 'Advanced' },
     { name: 'Vanilla CSS', category: 'frontend', level: 'Advanced' },
@@ -22,20 +21,13 @@ export default function Skills() {
     
     // Backend
     { name: 'Java', category: 'backend', level: 'Advanced' },
-    { name: 'Spring Boot', category: 'backend', level: 'Advanced' },
     { name: 'RESTful APIs', category: 'backend', level: 'Advanced' },
-    { name: 'Hibernate & JPA', category: 'backend', level: 'Intermediate' },
     { name: 'Microservices', category: 'backend', level: 'Intermediate' },
-    { name: 'SQL & Database Design', category: 'backend', level: 'Advanced' },
     
     // Tools & Databases
-    { name: 'PostgreSQL', category: 'tools', level: 'Intermediate' },
-    { name: 'MySQL', category: 'tools', level: 'Advanced' },
     { name: 'Git & GitHub', category: 'tools', level: 'Advanced' },
-    { name: 'Maven', category: 'tools', level: 'Intermediate' },
-    { name: 'Docker', category: 'tools', level: 'Intermediate' },
     { name: 'REST Client / Postman', category: 'tools', level: 'Advanced' },
-    { name: 'Linux / Command Line', category: 'tools', level: 'Intermediate' }
+    { name: 'Figma', category: 'tools', level: 'Advanced' }
   ];
 
   const filteredSkills = filter === 'all' 

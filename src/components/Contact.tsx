@@ -9,7 +9,7 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const emailAddress = 'pranav.sde@gmail.com'; // Customizable professional email
+  const emailAddress = 'pranv.venu.official@gmail.com'; // Customizable professional email
 
   // Copy Email to Clipboard
   const handleCopyEmail = async () => {
@@ -31,19 +31,39 @@ export default function Contact() {
   };
 
   // Handle Form Submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formState.name || !formState.email || !formState.message) return;
 
     setIsSubmitting(true);
-    // Simulate API request
-    setTimeout(() => {
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${emailAddress}`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          message: formState.message
+        })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormState({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (err) {
+      console.error('Error sending email:', err);
+      setSubmitStatus('error');
+    } finally {
       setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormState({ name: '', email: '', message: '' });
-      // Reset success status message after 5 seconds
+      // Reset status message after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000);
-    }, 1500);
+    }
   };
 
   return (
@@ -194,6 +214,11 @@ export default function Contact() {
               {submitStatus === 'success' && (
                 <div className="form-status-message success animate-fade-in">
                   <span>✦ Thank you! Your message has been sent successfully.</span>
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="form-status-message error animate-fade-in">
+                  <span>✦ Oops! There was an issue sending your message. Please try again.</span>
                 </div>
               )}
             </form>

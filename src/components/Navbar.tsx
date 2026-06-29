@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Sun, Moon, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Sun, Moon, Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -40,7 +40,7 @@ export default function Navbar() {
       }
 
       // Track active section on scroll
-      const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+      const sections = ['home', 'about', 'experience', 'skills', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -63,7 +63,6 @@ export default function Navbar() {
   const navLinks = [
     { name: 'About Me', href: '#about', id: 'about' },
     { name: 'Experience', href: '#experience', id: 'experience' },
-    { name: 'Portfolio', href: '#projects', id: 'projects' },
     { name: 'Skills', href: '#skills', id: 'skills' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
@@ -73,7 +72,6 @@ export default function Navbar() {
       <div className="navbar-container">
         {/* Logo */}
         <a href="#home" className="logo" aria-label="Pranav Portfolio Home">
-          <span className="logo-symbol">✦</span>
           <span className="logo-text">PRANAV</span>
         </a>
 
@@ -104,14 +102,7 @@ export default function Navbar() {
             {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
           </button>
 
-          {/* Book A Call (Desktop only) */}
-          <a
-            href="#contact"
-            className="action-btn book-call-btn"
-          >
-            <span>Book A Call</span>
-            <ArrowUpRight size={14} className="btn-icon" />
-          </a>
+
 
           {/* Mobile Menu Toggle Button */}
           <button
@@ -139,16 +130,7 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <li className="mobile-nav-action-item">
-              <a
-                href="#contact"
-                onClick={() => setIsOpen(false)}
-                className="mobile-book-call-btn"
-              >
-                <span>Book A Call</span>
-                <ArrowUpRight size={16} />
-              </a>
-            </li>
+
           </ul>
         </nav>
       </div>
