@@ -1,0 +1,98 @@
+.about-section {
+  background-color: var(--bg-primary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* Left Column - Core Statement */
+.about-statement {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.about-statement .serif-font {
+  color: var(--accent-gold);
+}
+
+/* Right Column - Detailed narrative */
+.about-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.narrative-paragraph {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.narrative-paragraph strong {
+  color: var(--text-primary);
+}
+
+/* Values Grid */
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  transition: border-color var(--transition-speed) ease;
+}
+
+.value-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.value-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+}
+
+.value-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .about-grid {
+    gap: 3rem;
+  }
+
+  .about-statement {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+}
